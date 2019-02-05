@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<br>
+
+<form action="/" method="post">
+    <fieldset>
+        Username
+        <input type="text" id="new-username" name="new-username"/>
+        <span class="error">{{username_error}}</span>
+        <br>
+        Password
+        <input id="new-username" type="password" name="new-password"/>
+        <span class="error">{{password_error}}</span>
+        <br>
+        Verify Password
+        <input id="match-password" type="password" name="match-password"/>
+        <span class="error">{{match_error}}</span>
+        <br>
+        Email (Optional)
+        <input type="text" name="register-email"/>
+
+    </fieldset>
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
+
+
+{% if error %}
+  <p class='error'>{{ error }}</p>
+{% endif %}
+{% endblock %}
