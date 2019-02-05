@@ -15,7 +15,7 @@ def val_username(new_username):
     if len(new_username) < 1:
         username_error = "Username field cannot be blank."
     elif len(new_username) < 3 or len(new_username) > 20:
-        username_error = "That's not a valid username."
+        username_error = "That is not a valid username."
     elif ' ' in new_username:
         username_error = "Username cannot contain spaces."
     else:
@@ -26,7 +26,7 @@ def val_password(new_password):
     if len(new_password) < 1:
         password_error = "Password field cannot be blank."
     elif len(new_password) <3 or len(new_password) >20:
-        password_error = "That's not a valid password."
+        password_error = "That is not a valid password."
     elif ' ' in new_password:
         password_error = "Password cannot contain spaces"
     else:
